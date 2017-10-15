@@ -13,4 +13,4 @@
         <h3>Média: <%= Quiz.getMedia() %></h3>
         <h4><a href ="quiz.jsp">Realizar teste</a></h4>
     </body>
-</html>
+</html> 
