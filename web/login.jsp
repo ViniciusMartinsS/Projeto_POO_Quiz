@@ -13,7 +13,7 @@
             if (request.getParameter("salvar") != null){
                 String player = request.getParameter("usuario");
                 HttpSession sessão = request.getSession();
-                sessão.setAttribute("teste", player);
+                sessão.setAttribute("local", player);
                 Usuario pessoa = new Usuario();
                 pessoa.setPlayer(player);
                 Usuario.getUsuario().add(pessoa);
