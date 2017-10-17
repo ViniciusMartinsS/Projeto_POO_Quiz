@@ -29,8 +29,8 @@
                 ex.getMessage();
             <%}%>
             <form><b>Insira seu Username: </b></br></br>
-                <input type="text" name="nome" value=""/></br></br>
-                <input type="submit" name="salvar" value="Entrar"/>
+                <input type="text" name="nome" required/></br></br>
+                <input type="submit" name="salvar" value="Entrar" r/>
             </form> 
              <%@include file="WEB-INF/jspf/footer_1.jspf"%>
    </center> </body>

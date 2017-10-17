@@ -11,7 +11,14 @@
         <title>Home</title>
     </head>
     <body style="background-color:#DCDCDC"><center>
-        <%HttpSession sessão = request.getSession();%>
+        
+        <%HttpSession sessão = request.getSession();
+            if(session.getAttribute("user") == null){
+         %>
+         <a href="login.jsp">Autentique-se</a>
+        <%}%>
+        <%Usuario pessoa = new Usuario(); %>
+       
         <h4 style="color:#007BFF" >Bem-Vindo <%= sessão.getAttribute("user")%> </h4>
         <h5 style="color:#007BFF" >Testes que você realizou: <%= Quiz.quantidade%></h5>
         <h5 style="color:#007BFF" >Sua média: <%= Quiz.getMedia()%></h5>
@@ -23,18 +30,22 @@
             Quiz.quantidade = 0;
             response.sendRedirect("login.jsp");
         }
+        int contador = 0 ;
     %>
 
     <b>Últimos 10 testes realizados</b>
+     <%for (Usuario F : Usuario.getUsuario()) { contador++;
+     if(contador == 10) break;
+     %>
     <table border="1">
         <tr>
-            <%for (int i = 1; i <= 10; i++) {%>
+           <%for(int i = 0; i<10; i++){ %>
         <tr>
-            <td><%=i%></td>
-            <td>---------</td>
-            <td>---------</td>
-            <td>---------</td>
+            <td><%=(i+1)%></td>
+            <td><%=F.getPlayer()%></td>
+            <td><%= F.media_user %></td>
         </tr>
+        <%}%>
         <%}%>
     </center>
         <%@include file="WEB-INF/jspf/footer_1.jspf"%>
