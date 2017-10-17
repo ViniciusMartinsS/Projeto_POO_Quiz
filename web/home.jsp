@@ -19,25 +19,18 @@
             String player = session.getAttribute("local").toString();
            
         %>
-        <nav class="navbar navbar-default">
               
             <li class="active"><a href="login.jsp">Olá, <%= player %></a></li>
               <form>
                     <input class="btn btn-danger navbar-btn" style="margin-left: 10px;" type="submit" name="btnSair" value="Sair"/>  
               </form>
-           
-           </nav> 
-        
-        
-            
-        <center>
+     
         <h3>Quiz - Conhecimentos gerais</h3>
         <h4><a href="quiz.jsp"><button type="button" class="btn btn-default">Realizar teste</button></a></h4>
         <h3>Testes realizados: <%= Quiz.quantidade %></h3>
         <h3>Média: <%= Quiz.getMedia() %> </h3>
         <%Usuario pessoa = new Usuario();%>
         <h3>nota usuario: <%= pessoa.getNota() %> </h3>
-        </center>
     <hr>
     <h3>Últimos 10 testes realizados</h3>
         <table border="1">
