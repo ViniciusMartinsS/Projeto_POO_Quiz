@@ -10,7 +10,7 @@ public class Usuario {
             pessoa = new ArrayList<>();
         }
         return pessoa;
-    
+    }
     public String getPlayer() {
         return player;
     }

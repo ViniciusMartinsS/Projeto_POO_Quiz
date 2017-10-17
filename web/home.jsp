@@ -29,7 +29,7 @@
         <h3>Testes realizados: <%= Quiz.quantidade %></h3>
         <h3>Média: <%= Quiz.getMedia() %> </h3>
         <%Usuario pessoa = new Usuario();%>
-        <h3>nota usuario: <%= pessoa.getNota() %> </h3>
+        <h3>nota usuario: <%= pessoa.getPlayer() %> </h3>
     <hr>
     <% pessoa.getUsuario();%>
     <h3>Últimos 10 testes realizados</h3>
@@ -42,8 +42,8 @@
              <%for (int i=1; i<=10; i++){%>
             <tr>
                 <td><%=i%></td>
-                 <td><%=player%></td>
-                 <td><%pessoa.getNota();%></td>
+                 <td><%pessoa.getPlayer();%></td>
+                 <td><%pessoa.getPlayer();%></td>
             </tr>
             <%}%>
             </table>    
