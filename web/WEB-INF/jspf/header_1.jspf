@@ -1,0 +1,13 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <center><h4 class="text-primary">Math.(Quiz)² </h4></center> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <center><h4 class="text-black">Cadastro de usuário </h4></center> &emsp;
+            <ul class="navbar-nav mr-auto">
+
+            </ul>
+        </div>
+    </nav> 
+</header>

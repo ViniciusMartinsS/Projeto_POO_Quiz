@@ -1,75 +1,42 @@
+<%@page import="br.com.fatecpg.quiz.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="br.com.fatecpg.quiz.Quiz"%>
-<%@page import="br.com.fatecpg.quiz.Usuario"%>
+<%@include file="WEB-INF/jspf/header.jspf"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home-Quiz</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+        <title>Home</title>
     </head>
-    <body>
-        
-        <%
-           if (session.getAttribute("local") == null)
-           {%>
-           
-                  <li class="active"><a href="login.jsp">Login</a></li>
-           <%}else
-           {
-            String player = session.getAttribute("local").toString();
-        %>
-              
-            <a href="login.jsp">Bem vindo, <%= player %></a>
-              <form>
-                    <input class="btn btn-danger navbar-btn" style="margin-left: 10px;" type="submit" name="btnSair" value="Sair"/>  
-              </form>
-     
-        <h3>Quiz - Conhecimentos gerais</h3>
-        <h4><a href="quiz.jsp"><button type="button" class="btn btn-default">Realizar teste</button></a></h4>
-        <h3>Testes realizados: <%= Quiz.quantidade %></h3>
-        <h3>Média: <%= Quiz.getMedia() %> </h3>
-        <%Usuario pessoa = new Usuario();%>
-        <h3>nota usuario: <%= pessoa.getPlayer() %> </h3>
+    <body style="background-color:#DCDCDC"><center>
+        <%HttpSession sessão = request.getSession();%>
+        <h4 style="color:#007BFF" >Bem-Vindo <%= sessão.getAttribute("user")%> </h4>
+        <h5 style="color:#007BFF" >Testes que você realizou: <%= Quiz.quantidade%></h5>
+        <h5 style="color:#007BFF" >Sua média: <%= Quiz.getMedia()%></h5>
     <hr>
-    <% pessoa.getUsuario();%>
-    <h3>Últimos 10 testes realizados</h3>
-        <table border="1">
-            <tr>
-                <th>Indice</th>
-                <th>Nome</th>
-                <th>Nota</th>
-            </tr>
-             <%for (int i=1; i<=10; i++){%>
-            <tr>
-                <td><%=i%></td>
-                 <td><%pessoa.getPlayer();%></td>
-                 <td><%pessoa.getPlayer();%></td>
-            </tr>
-            <%}%>
-            </table>    
-        <%}
-            if (request.getParameter("btnSair") != null)
-            {
-                
-                session.invalidate();
-                response.sendRedirect("home.jsp");
-                
-            }
-        %>
-        <h3>Top 10 melhores notas</h3>
-        <table border="1">
-            <tr>
-                <th>Indice</th>
-                <th>Nome</th>
-                <th>Nota</th>
-            </tr>
-             <%for (int i=1; i<=10; i++){%>
-            <tr>
-                <td><%=i%></td>
-                <td><%%></td>
-                 <td><%%></td>
-            </tr>
-            <%}%>
-           </table>
+
+    <%
+        if (request.getParameter("btn") != null) {
+            session.invalidate();
+            Quiz.quantidade = 0;
+            response.sendRedirect("login.jsp");
+        }
+    %>
+
+    <b>Últimos 10 testes realizados</b>
+    <table border="1">
+        <tr>
+            <%for (int i = 1; i <= 10; i++) {%>
+        <tr>
+            <td><%=i%></td>
+            <td>---------</td>
+            <td>---------</td>
+            <td>---------</td>
+        </tr>
+        <%}%>
+    </center>
+        <%@include file="WEB-INF/jspf/footer_1.jspf"%>
     </body>
 </html> 

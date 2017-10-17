@@ -1,0 +1,18 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+   <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <center><h4 class="text-primary">Math.(Quiz)² </h4></center> &emsp;
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+      <a class="nav-link" href="quiz.jsp">Realizar Teste<span class="sr-only">(current)</span></a>
+      </li>
+
+               <form>
+             <input class="btn  align-middle btn-outline-secondary" type="submit" name="btn" value="Log Out">
+         </form>
+    </ul>
+  </div>
+</nav> 
+    </header>

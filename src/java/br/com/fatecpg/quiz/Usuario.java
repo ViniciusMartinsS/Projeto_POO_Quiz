@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 public class Usuario {
     private String player;
+    double media_user = Quiz.getMedia();
    
     private static ArrayList<Usuario> pessoa;
     public static ArrayList<Usuario> getUsuario(){

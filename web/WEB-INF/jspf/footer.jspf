@@ -1,0 +1,24 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+<style>
+    footer{
+    bottom:0;
+    width:100%;
+            }
+</style>
+
+<footer>
+    <center>
+        <nav class="navbar navbar-expand-lg navbar-inverse bg-light">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <li class="nav-item active">
+                        <font>Copyright © FATEC POO 2017</font>
+                    </li>
+                </ul>
+            </div>
+        </nav> 
+    </center>
+</footer>
