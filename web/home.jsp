@@ -17,10 +17,9 @@
            <%}else
            {
             String player = session.getAttribute("local").toString();
-           
         %>
               
-            <li class="active"><a href="login.jsp">Olá, <%= player %></a></li>
+            <a href="login.jsp">Bem vindo, <%= player %></a>
               <form>
                     <input class="btn btn-danger navbar-btn" style="margin-left: 10px;" type="submit" name="btnSair" value="Sair"/>  
               </form>
@@ -32,6 +31,7 @@
         <%Usuario pessoa = new Usuario();%>
         <h3>nota usuario: <%= pessoa.getNota() %> </h3>
     <hr>
+    <% pessoa.getUsuario();%>
     <h3>Últimos 10 testes realizados</h3>
         <table border="1">
             <tr>
@@ -42,7 +42,7 @@
              <%for (int i=1; i<=10; i++){%>
             <tr>
                 <td><%=i%></td>
-                 <td><%pessoa.getUsuario();%></td>
+                 <td><%=player%></td>
                  <td><%pessoa.getNota();%></td>
             </tr>
             <%}%>
