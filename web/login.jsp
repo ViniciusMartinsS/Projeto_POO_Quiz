@@ -11,7 +11,7 @@
         <h1>Cadastrar usuário</h1>
         <%try{
             if (request.getParameter("salvar") != null){
-                String player = request.getParameter("usuario");
+                String player = request.getParameter("nome");
                 HttpSession sessão = request.getSession();
                 sessão.setAttribute("local", player);
                 Usuario pessoa = new Usuario();
@@ -25,7 +25,7 @@
                 ex.getMessage();
             <%}%>
             <form>Digite seu nome:  </br>
-                <input type="text" name="usuario" value=""/></br>
+                <input type="text" name="nome" value=""/></br>
                 <input type="submit" name="salvar" value="salvar"/>
             </form> 
     </body>
